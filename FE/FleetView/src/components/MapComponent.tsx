@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, ZoomControl } from 'react-leaflet';
 import FreenowCar from '../assets/free-now.svg';
 import sharenowCar from '../assets/share-now.svg';
 import L from 'leaflet'; // Import Leaflet
@@ -39,8 +39,10 @@ const MapComponent: React.FC<Props> = ({ vehicles, onSelect, selected }) => {
         zoom={10} // Adjust zoom level as needed
         style={{ height: '100%', width: '100%' }} // Ensure map takes full container space
         scrollWheelZoom={true} // Optional: Allow zoom via scroll wheel
+        zoomControl={false} // Disable default zoom control
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <ZoomControl position="topright" />
         {vehicles.map((vehicle) => {
           const iconUrl = getCustomIcon(vehicle.provider); // Get the correct icon URL based on vehicle provider
           const customIcon = createCustomIcon(iconUrl); // Create a custom icon with the URL

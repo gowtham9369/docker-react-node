@@ -66,8 +66,7 @@ const Home = () => {
       <Container
         maxWidth={false}
         sx={{
-          marginBottom: 2,
-          borderBottom: 1,
+          marginBottom: 5,
           border: "1px solid #ccc",
           backgroundColor: "white",
           boxShadow: 0,
@@ -76,7 +75,7 @@ const Home = () => {
         {loading ? (
           <SkeletonLoader />
         ) : (
-          <Paper elevation={3} sx={{ padding: 2, marginTop: 2 }}>
+          <Paper elevation={3} sx={{ padding: 2, marginTop: 2,boxShadow: 0 }}>
             <Stack spacing={2} direction={{ xs: "column", md: "row" }}>
               <Box flex={1}>
                 <MapComponent
