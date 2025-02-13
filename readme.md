@@ -51,13 +51,13 @@ npm run build
 ## Screenshots
 
 ### Mobile View
-![Mobile View](./src/assets/mobile.png)
+![Mobile View](./FE/FleetView/src/assets/mobile.png)
 
 ### Tablet View
-![Tablet View](./src/assets/tablet.png)
+![Tablet View](./FE/FleetView/src/assets/tablet.png)
 
 ### Desktop View
-![Desktop View](./src/assets/mobile.png)
+![Desktop View](./FE/FleetView/src/assets/mobile.png)
 
 ## License
 
