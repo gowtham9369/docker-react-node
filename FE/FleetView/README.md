@@ -57,7 +57,7 @@ npm run build
 ![Tablet View](./src/assets/tablet.png)
 
 ### Desktop View
-![Desktop View](./src/assets/mobile.png)
+![Desktop View](./src/assets/desktop.png)
 
 ## License
 
