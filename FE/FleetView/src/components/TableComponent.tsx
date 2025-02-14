@@ -29,7 +29,7 @@ const TableComponent: React.FC<Props> = ({ vehicles, onSelect, selected }) => {
             >
               <TableCell>{vehicle.provider || '-'}</TableCell>
               <TableCell>{vehicle.licencePlate}</TableCell>
-              <TableCell>{vehicle.coordinate ? `${vehicle.coordinate.latitude} ${vehicle.coordinate.longitude}` : '-'}</TableCell>
+              <TableCell>{vehicle.coordinate ? (<>{vehicle.coordinate.latitude} <br /> {vehicle.coordinate.longitude}</>) : '-'}</TableCell>
               <TableCell>{vehicle.address || '-'}</TableCell>
               <TableCell>
                 <VehicleStatus state={vehicle.state} /> 
