@@ -1,6 +1,6 @@
 import React from 'react';
-import MoodIcon from '@mui/icons-material/Mood';
-import MoodBadIcon from '@mui/icons-material/MoodBad';
+import SentimentSatisfiedOutlinedIcon from '@mui/icons-material/SentimentSatisfiedOutlined';
+import SentimentDissatisfiedOutlinedIcon from '@mui/icons-material/SentimentDissatisfiedOutlined';
 import { Tooltip } from '@mui/material';
 import { VehicleConditionProps } from '../types/vehicle';
 
@@ -8,7 +8,7 @@ import { VehicleConditionProps } from '../types/vehicle';
 const VehicleCondition: React.FC<VehicleConditionProps> = ({ condition }) => {
   return (
     <Tooltip title={condition === "GOOD" ? "Good Condition" : "Bad Condition"}>
-      {condition === "GOOD" ? <MoodIcon color="success" /> : <MoodBadIcon color="error" /> }
+      {condition === "GOOD" ? <SentimentSatisfiedOutlinedIcon color="success" /> : <SentimentDissatisfiedOutlinedIcon color="error" /> }
     </Tooltip>
   );
 };
