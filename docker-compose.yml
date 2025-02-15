@@ -1,0 +1,32 @@
+# Docker Compose Version
+version: '1.0'
+# Services
+services:
+  # Backend Service
+  backend:
+    build: ./Server
+    ports:
+      - "5001:5001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/free-now/vehicles"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - web-app
+
+  # Frontend Service
+  frontend:
+    build: ./FE/FleetView
+    ports:
+      - "8000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - web-app
+
+# Networks
+networks:
+  web-app:
+    driver: bridge
